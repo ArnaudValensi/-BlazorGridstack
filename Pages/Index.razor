@@ -1,0 +1,42 @@
+﻿@page "/"
+
+<style>
+    body {
+        background: #2c3e50;
+    }
+
+    main {
+       display: flex;
+       flex-direction: column;
+    }
+
+    .index-content {
+        flex-grow: 1;
+        padding: 4px;
+    }
+
+    .grid-stack-item-content {
+        background: white;
+        color: #2c3e50;
+    }
+</style>
+
+<PageTitle>Index</PageTitle>
+<div class="index-content">
+    <div class="grid-stack">
+        <div class="grid-stack-item">
+            <div class="grid-stack-item-content">Item 1</div>
+        </div>
+        <div class="grid-stack-item" gs-w="2">
+            <div class="grid-stack-item-content">Item 2 wider</div>
+        </div>
+    </div>
+</div>
+
+@code {
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        return base.OnAfterRenderAsync(firstRender);
+    }
+
+}
